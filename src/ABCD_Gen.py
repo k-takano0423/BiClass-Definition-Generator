@@ -6,7 +6,7 @@ from tqdm.auto import tqdm
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.model_selection import StratifiedKFold
 
-CONFIG = json.load(open('./config_file/debug_config.json', 'r'))
+CONFIG = json.load(open('./config_file/config.json', 'r'))
 PROMPT_DICT = json.load(open(f"./config_file/{CONFIG['LANGUAGE']}_prompt.json", 'r'))
 client = OpenAI(
     api_key = CONFIG['OPENAI_API_KEY'],
