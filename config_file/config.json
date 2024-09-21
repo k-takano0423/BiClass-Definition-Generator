@@ -1,0 +1,11 @@
+{
+    'OPENAI_API_KEY': '',
+    'MODEL_NAME': 'gpt-4o-mini-2024-07-18',
+    'LANGUAGE': 'ja',
+    'DATA_PATH': './data',
+    'N_SPLIT': 4,
+    'TRUE_SAMPLE_SIZE': 10,
+    'FALSE_SAMPLE_SIZE': 10,
+    'FALSE_NEGATIVE_SAMPLE_SIZE': 2,
+    'FALSE_POSITIVE_SAMPLE_SIZE': 2,
+}
