@@ -1,11 +1,14 @@
 {
-    'OPENAI_API_KEY': '',
-    'MODEL_NAME': 'gpt-4o-mini-2024-07-18',
-    'LANGUAGE': 'ja',
-    'DATA_PATH': './data',
-    'N_SPLIT': 4,
-    'TRUE_SAMPLE_SIZE': 10,
-    'FALSE_SAMPLE_SIZE': 10,
-    'FALSE_NEGATIVE_SAMPLE_SIZE': 2,
-    'FALSE_POSITIVE_SAMPLE_SIZE': 2,
+    "OPENAI_API_KEY": "",
+    "EXPERIMENT_NAME": "exp1",
+    "MODEL_NAME": "gpt-4o-mini-2024-07-18",
+    "LANGUAGE": "ja",
+    "DATA_PATH": "./data",
+    "OUTPUT_PATH": "./outputs",
+    "N_SPLIT": 4,
+    "SEED_DEFINITION_STATEMENT": null,
+    "SEED_GEN_TRUE_DATA_NUM": 10,
+    "SEED_GEN_FALSE_DATA_NUM": 10,
+    "MAX_SAMPLING_FALSE_NEGA_DATA_NUM": 2,
+    "MAX_SAMPLING_FALSE_POSI_DATA_NUM": 2
 }

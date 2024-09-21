@@ -1,0 +1,8 @@
+{
+    "first_prompt": "以下に入力する文を大規模言語モデルで2値分類したいと考えています。\nTrue文を大規模言語モデルで分類するための定義文を生成してください。\n",
+    "classify_prompt": "\n以下に入力する文は上記の定義文に該当しますか？\n該当する場合はTrue、該当しない場合はFalseを出力してください。\n",
+    "prompt_turning_prompt": "\nあなたが自動生成してくれた上記の定義文を用いて分類を行った結果、以下の文の分類に失敗しております。\n誤分類の結果を踏まえて、定義文を修正してください。",
+    "false_negative_prompt": "\nTrue文だが、False文と判定された文: ",
+    "false_positive_prompt": "\nFalse文だが、True文と判定された文: ",
+    "extract_definition_prompt": "以下の文章から定義文を抽出し、定義文を作成してください。\n"
+}
