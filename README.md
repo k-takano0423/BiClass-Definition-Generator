@@ -128,4 +128,4 @@ training data : validation data = (N_SPLIT - 1) : 1となるようにtrain_dfと
 
 ## License
 
-This code is licensed under the ...
+This code is licensed under the [Apache 2.0 LICENSE](LICENSE-2.0.txt)
