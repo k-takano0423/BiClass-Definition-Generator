@@ -1,7 +1,11 @@
+<img src="image/method_step2.png" />
+
 # BiClass-Definition-Generator
 BiClass-Definition-Generatorは，Zero-Shotでテキストを二値分類するための定義文を学習データから生成する手法をツール化したものです．
 
 git cloneでソースコードをローカル環境にダウンロードし，設定ファイルの書き換えと自前のデータを準備することで，誰でも簡単に使用することが可能です．
+
+提案手法の詳細に関しては，こちらの論文をご参照ください．
 
 なお，このソースコードでは，LLMsとしてOpenAIのモデルをAPI経由で使用しているため，ソースコードの実行にはOpenAIの登録およびAPI使用量が発生します．
 
