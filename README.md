@@ -116,16 +116,31 @@ training data : validation data = (N_SPLIT - 1) : 1となるようにtrain_dfと
 
 
 ## Citation
+手法を引用する場合はこちら
+
+```
+@article{BCD-Gen2024,
+  title={大規模言語モデルを用いた金融テキスト二値分類タスクの定義文生成とチューニング手法の提案},
+  author={高野 海斗 and 中川 慧 and 藤本 悠吾},
+  journal={人工知能学会第二種研究会資料},
+  volume={2024},
+  number={FIN-033},
+  pages={155-162},
+  year={2024},
+  doi={10.11517/jsaisigtwo.2024.FIN-033_155}
+}
+```
+
+手法を使用する場合はこちら
 
 ```
 @misc{BCD-Gen,
   title={BiClass Definition Generator},
   url={https://github.com/k-takano0423/BiClass-Definition-Generator},
   author={
-    Kaito Takano and
-    Kei Nakagawa and
-    Yugo Fujimoto
+    Kaito Takano
   },
+  yomi={takano},
   year={2024},
 }
 ```
