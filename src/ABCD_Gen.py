@@ -1,5 +1,7 @@
+import time
 from openai import OpenAI
 import numpy as np
+import openai
 import pandas as pd
 import json
 from tqdm.auto import tqdm
@@ -19,15 +21,27 @@ def fn_compute_metrics(labels, preds):
     f1 = f1_score(labels, preds)
     return {'accuracy': accuracy, 'precision': precision, 'recall': recall, 'f1': f1}
 
-def generate_text(prompt, model_name="gpt-4o-mini-2024-07-18", temperature=0):
+def generate_text(prompt, model_name="gpt-4o-mini-2024-07-18", temperature=0, max_trials=10):
     messages = [
                     {"role": "user", "content": prompt}
                 ]
-    response = client.chat.completions.create(
-            model=model_name,
-            messages=messages,
-            temperature=temperature
-        )
+    for i in range(max_trials):
+        try:
+            response = client.chat.completions.create(
+                    model=model_name,
+                    messages=messages,
+                    temperature=temperature
+                )
+            break
+        except openai.RateLimitError as e:
+            if i >= max_trials - 1:
+                raise e
+            sleep_time = 10 * 2 ** i
+            print(f'Rate Limit Error ({i + 1}/{max_trials}). Sleep for {sleep_time} seconds')
+            time.sleep(sleep_time)
+            continue
+        except Exception as e:
+            raise e
     return response.choices[0].message.content.strip()
 
 def make_first_prompt(df, SEED_GEN_TRUE_DATA_NUM=10, SEED_GEN_FALSE_DATA_NUM=10):
