@@ -147,7 +147,7 @@ def main():
         sample_df = train_df[train_df['cv_flag'] == k].copy()
         if definition_statement is None:
             prompt = make_first_prompt(sample_df, CONFIG['SEED_GEN_TRUE_DATA_NUM'], CONFIG['SEED_GEN_FALSE_DATA_NUM'])
-            generated_output = generate_text(prompt)
+            generated_output = generate_text(prompt, model_name)
             print('Generated Definition: ')
             print(generated_output)
             # 入力を受け取る

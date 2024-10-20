@@ -121,7 +121,7 @@ def main():
         sample_df = train_df[train_df['cv_flag'] == k].copy()
         if definition_statement is None:
             prompt = make_first_prompt(sample_df, CONFIG['SEED_GEN_TRUE_DATA_NUM'], CONFIG['SEED_GEN_FALSE_DATA_NUM'])
-            generated_output = generate_text(prompt)
+            generated_output = generate_text(prompt, model_name)
             prompt = PROMPT_DICT['extract_definition_prompt'] + generated_output
             definition_statement = generate_text(prompt, model_name)
             generated_text_list.append(generated_output)
